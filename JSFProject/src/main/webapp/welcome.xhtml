@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+     <title>Hello World</title>
+    </h:head>
+<h:body>
+     <h3> Ciao <h:outputText value="#{personBean.name}"></h:outputText>&nbsp;<h:outputText value="#{personBean.surname}"></h:outputText>!</h3>
+    <h:outputText>Vuoi inserire anche il tuo indrizzo?</h:outputText>
+	<h:form>
+	<h:outputLabel for="citta" value="Città"></h:outputLabel>
+	<h:inputText id="citta" value="#{personBean.indirizzo.città}"></h:inputText>
+	<h:outputLabel for="via" value="Via"></h:outputLabel>
+	<h:inputText id="via" value="#{personBean.indirizzo.via}"></h:inputText>
+	<h:outputLabel for="civico" value="Civico"></h:outputLabel>
+	<h:inputText id="civico" value="#{personBean.indirizzo.civico}"></h:inputText>
+	<h:commandButton value="Invia info" action="info-complete"></h:commandButton>
+	<h:inputHidden value='#{personBean.name}'/>
+	<h:inputHidden value='#{personBean.surname}'/>
+	<h:commandButton value="No, grazie" action="no-info"></h:commandButton>	
+	</h:form>
+</h:body>
+</html>
