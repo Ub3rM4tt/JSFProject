@@ -7,6 +7,7 @@ xmlns:h="http://java.sun.com/jsf/html">
 <title>Insert title here</title>
 </h:head>
 <h:body>
+<div class="wrapper">
 <h3><h:outputText value="Riepilogo delle informazioni:"/></h3>
 	<p>Nome : <h:outputText value="#{personBean.name}"/> </p>
 	<p>Cognome : <h:outputText value="#{personBean.surname}"/></p>
@@ -16,5 +17,6 @@ xmlns:h="http://java.sun.com/jsf/html">
 <h:form>
 <h:commandButton action="index" value="torna alla home"/>
 </h:form>
+</div>
 </h:body>
 </html>

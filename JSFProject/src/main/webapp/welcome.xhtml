@@ -10,8 +10,9 @@
      <title>Hello World</title>
     </h:head>
 <h:body>
-     <h3> Ciao <h:outputText value="#{personBean.name}"></h:outputText>&nbsp;<h:outputText value="#{personBean.surname}"></h:outputText>!</h3>
-    <h:outputText>Vuoi inserire anche il tuo indrizzo?</h:outputText>
+<div class="wrapper">
+     <h2> Ciao <h:outputText value="#{personBean.name}"></h:outputText>&nbsp;<h:outputText value="#{personBean.surname}"></h:outputText>!</h2>
+    <h3><h:outputText value="Vuoi inserire anche il tuo indrizzo?"/></h3>
 	<h:form>
 	<h:outputLabel for="citta" value="Città"></h:outputLabel>
 	<h:inputText id="citta" value="#{personBean.indirizzo.città}"></h:inputText>
@@ -24,5 +25,6 @@
 	<h:inputHidden value='#{personBean.surname}'/>
 	<h:commandButton value="No, grazie" action="no-info"></h:commandButton>	
 	</h:form>
+	</div>
 </h:body>
 </html>
